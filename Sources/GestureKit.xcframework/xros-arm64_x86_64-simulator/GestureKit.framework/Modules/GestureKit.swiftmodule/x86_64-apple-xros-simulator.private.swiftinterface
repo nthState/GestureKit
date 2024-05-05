@@ -1,0 +1,394 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target x86_64-apple-xros1.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -package-name gesturekit -module-name GestureKit
+import ARKit
+import Foundation
+import Foundation/*.Bundle*/
+import Foundation/*.ProcessInfo*/
+import Foundation/*.URL*/
+import OSLog
+import Observation
+import RealityKit
+import Swift
+import SwiftUI
+import UIKit
+import UUIDV7
+import _Concurrency
+import _RealityKit_SwiftUI
+import _StringProcessing
+import _SwiftConcurrencyShims
+import simd
+extension GestureKit.GesturePackage {
+  public class File : Swift.Codable {
+    public var version: Swift.String {
+      get
+      set
+    }
+    public var metadata: GestureKit.MetaData {
+      get
+      set
+    }
+    public var poses: [GestureKit.Pose] {
+      get
+      set
+    }
+    public init()
+    public func add(pose: GestureKit.Pose)
+    required public init(from decoder: any Swift.Decoder) throws
+    public func encode(to encoder: any Swift.Encoder) throws
+    @objc deinit
+  }
+}
+extension GestureKit.GesturePackage.File : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension GestureKit.GesturePackage.File : Observation.Observable {
+}
+extension GestureKit.GesturePackage {
+  public func startCapture()
+  public func capturePose(left: (any GestureKit.HandAnchorable)?, right: (any GestureKit.HandAnchorable)?)
+  public func capturePose(left: ARKit.HandAnchor?, right: ARKit.HandAnchor?)
+  public func stopCapture()
+  public func removeHandStep(at index: Swift.Int)
+  public func pose(at index: Swift.Int) -> GestureKit.Pose?
+  @_hasMissingDesignatedInitializers public class Intermediate : Swift.Codable {
+    public var handJointSteps: [GestureKit.GesturePackage.HandJoint] {
+      get
+      set
+    }
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+    @objc deinit
+  }
+  public class HandJoint : Swift.Codable {
+    public var name: Swift.String
+    public var left: [Swift.String : RealityFoundation.Transform]
+    public var right: [Swift.String : RealityFoundation.Transform]
+    public init(name: Swift.String = UUID().uuidString, left: [Swift.String : RealityFoundation.Transform] = [: ], right: [Swift.String : RealityFoundation.Transform] = [: ])
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+}
+extension GestureKit.GesturePackage.HandJoint : Swift.Equatable {
+  public static func == (lhs: GestureKit.GesturePackage.HandJoint, rhs: GestureKit.GesturePackage.HandJoint) -> Swift.Bool
+}
+extension GestureKit.GesturePackage.HandJoint : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension GestureKit.GesturePackage.Intermediate : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension GestureKit.GesturePackage.Intermediate : Observation.Observable {
+}
+extension GestureKit.GesturePackage {
+  public var quickLookUSDZ: Foundation.URL {
+    get
+  }
+  public var previewThumbnail: Foundation.URL {
+    get
+  }
+}
+extension GestureKit.GesturePackage {
+  public var isValidForUpload: Swift.Bool {
+    get
+  }
+}
+public class GesturePackage {
+  public static let fileExtension: Swift.String
+  public var file: GestureKit.GesturePackage.File! {
+    get
+    set
+  }
+  public var intermediate: GestureKit.GesturePackage.Intermediate! {
+    get
+    set
+  }
+  public var name: Swift.String {
+    get
+  }
+  public var metaData: GestureKit.MetaData {
+    get
+  }
+  public func remove(at index: Swift.Int)
+  public func invalidate()
+  public func save(to: Foundation.URL, skipIntermediate: Swift.Bool = false) throws
+  public init()
+  public init(url packageURL: Foundation.URL) throws
+  @objc deinit
+}
+extension GestureKit.GesturePackage : Observation.Observable {
+}
+public class GestureRule : Swift.Codable {
+  final public let id: Swift.String
+  public var description: Swift.String {
+    get
+    set
+  }
+  public var source: Swift.String {
+    get
+    set
+  }
+  public var target: Swift.String {
+    get
+    set
+  }
+  public var action: GestureKit.PoseAction {
+    get
+    set
+  }
+  public var value: Swift.Float {
+    get
+    set
+  }
+  public init(description: Swift.String, source: Swift.String, target: Swift.String, action: GestureKit.PoseAction, value: Swift.Float)
+  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  @objc deinit
+}
+extension GestureKit.GestureRule : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension GestureKit.GestureRule : Swift.Identifiable {
+  public typealias ID = Swift.String
+}
+extension GestureKit.GestureRule : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension GestureKit.GestureRule : Swift.Equatable {
+  public static func == (lhs: GestureKit.GestureRule, rhs: GestureKit.GestureRule) -> Swift.Bool
+}
+extension GestureKit.GestureRule : Observation.Observable {
+}
+public class MetaData : Swift.Codable {
+  public var title: Swift.String {
+    get
+    set
+  }
+  public var description: Swift.String {
+    get
+    set
+  }
+  public var tags: Swift.String {
+    get
+    set
+  }
+  public var author: Swift.String {
+    get
+    set
+  }
+  public var tool: Swift.String {
+    get
+    set
+  }
+  public init()
+  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  @objc deinit
+}
+extension GestureKit.MetaData : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension GestureKit.MetaData : Observation.Observable {
+}
+public class Pose : Swift.Codable {
+  public var id: Swift.String {
+    get
+    set
+  }
+  public var duration: Foundation.TimeInterval {
+    get
+    set
+  }
+  public var rules: [GestureKit.GestureRule] {
+    get
+    set
+  }
+  public init(duration: Foundation.TimeInterval, rules: [GestureKit.GestureRule])
+  public init()
+  public func add(rule: GestureKit.GestureRule)
+  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  @objc deinit
+}
+extension GestureKit.Pose {
+  public static var preview: GestureKit.Pose {
+    get
+  }
+}
+extension GestureKit.Pose : Swift.Identifiable {
+  public typealias ID = Swift.String
+}
+extension GestureKit.Pose : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension GestureKit.Pose : Swift.Equatable {
+  public static func == (lhs: GestureKit.Pose, rhs: GestureKit.Pose) -> Swift.Bool
+}
+extension GestureKit.Pose : Observation.Observable {
+}
+public enum PoseAction : Swift.String, Swift.Codable, Swift.CaseIterable {
+  case noop
+  case equal
+  case equal_position_within_tolerance
+  case distance_less_than
+  case distance_greater_than
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public static var allPublicCases: [GestureKit.PoseAction]
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [GestureKit.PoseAction]
+  public typealias RawValue = Swift.String
+  public static var allCases: [GestureKit.PoseAction] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension GestureKit.PoseAction : Swift.Identifiable {
+  public var id: Swift.String {
+    get
+  }
+  public typealias ID = Swift.String
+}
+public struct GestureDetectorConfiguration {
+  public static var `default`: GestureKit.GestureDetectorConfiguration
+  public var packages: [Foundation.URL] {
+    get
+  }
+  public init(packages: [Foundation.URL])
+}
+public enum GestureMatchType {
+  case full(url: Foundation.URL, name: Swift.String)
+  case partial(url: Foundation.URL, name: Swift.String, stage: Swift.Int)
+  case reset(url: Foundation.URL, name: Swift.String)
+}
+extension GestureKit.GestureMatchType : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public class GestureDetector {
+  public init(configuration: GestureKit.GestureDetectorConfiguration = .default)
+  public func add(url packageURL: Foundation.URL)
+  public func remove(url packageURL: Foundation.URL)
+  public func listPackages() -> [Foundation.URL]
+  @objc deinit
+}
+extension GestureKit.GestureDetector {
+  public var detectedGestures: _Concurrency.AsyncStream<GestureKit.GestureMatchType> {
+    get
+  }
+}
+public enum GestureKitError : Swift.Error {
+  case handModelCouldNotBeRead
+  public static func == (a: GestureKit.GestureKitError, b: GestureKit.GestureKitError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol HandAnchorable {
+  var chirality: ARKit.HandAnchor.Chirality { get }
+  var handSkeleton: ARKit.HandSkeleton? { get }
+  var originFromAnchorTransform: simd.simd_float4x4 { get }
+}
+extension ARKit.HandAnchor : GestureKit.HandAnchorable {
+}
+public struct HandColorChange {
+  public init(chirality: ARKit.HandAnchor.Chirality, color: SwiftUI.Color)
+}
+extension RealityFoundation.Entity {
+  @_Concurrency.MainActor(unsafe) public var descendentsWithModelComponent: [RealityFoundation.Entity] {
+    get
+  }
+}
+public struct HandRenderOptions : Swift.OptionSet {
+  public let rawValue: Swift.UInt
+  public init(rawValue: Swift.UInt)
+  public static var model: GestureKit.HandRenderOptions
+  public static var joints: GestureKit.HandRenderOptions
+  public static var bones: GestureKit.HandRenderOptions
+  public static let all: GestureKit.HandRenderOptions
+  public typealias ArrayLiteralElement = GestureKit.HandRenderOptions
+  public typealias Element = GestureKit.HandRenderOptions
+  public typealias RawValue = Swift.UInt
+}
+extension RealityFoundation.Transform : Swift.Codable {
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public class VirtualHands {
+  public var last_left_anchor: ARKit.HandAnchor?
+  public var last_right_anchor: ARKit.HandAnchor?
+  public init(configuration: GestureKit.VirtualHandsConfiguration = .default)
+  @discardableResult
+  public func createVirtualHands() throws -> (hand_left: RealityFoundation.Entity, hand_right: RealityFoundation.Entity)
+  #if compiler(>=5.3) && $AsyncAwait
+  public func startTracking() async
+  #endif
+  public func stopTracking()
+  public func showPose(left: (any GestureKit.HandAnchorable)?, right: (any GestureKit.HandAnchorable)?)
+  public func showStaticPose(left: [Swift.String : RealityFoundation.Transform], right: [Swift.String : RealityFoundation.Transform])
+  @objc deinit
+}
+extension GestureKit.VirtualHands {
+  #if compiler(>=5.3) && $AsyncAwait
+  @_Concurrency.MainActor public func startSession() async
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  @_Concurrency.MainActor public func startHandTracking() async
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  @_Concurrency.MainActor public func handleSessionEvents() async
+  #endif
+  public var latestAnchors: (leftHand: ARKit.HandAnchor?, rightHand: ARKit.HandAnchor?) {
+    get
+  }
+}
+public struct HandConfiguration {
+  public let color: SwiftUI.Color
+  public let usdz: Foundation.URL?
+  public static func `default`(chirality: ARKit.HandAnchor.Chirality) -> GestureKit.HandConfiguration
+  public static func defaultModel(chirality: ARKit.HandAnchor.Chirality) -> Foundation.URL?
+  public init(color: SwiftUI.Color = .white, usdz: Foundation.URL?)
+}
+public struct VirtualHandsConfiguration {
+  public static var `default`: GestureKit.VirtualHandsConfiguration
+  public var left: GestureKit.HandConfiguration {
+    get
+  }
+  public var right: GestureKit.HandConfiguration {
+    get
+  }
+  public var handRenderOptions: GestureKit.HandRenderOptions {
+    get
+  }
+  public init(left: GestureKit.HandConfiguration = .default(chirality: .left), right: GestureKit.HandConfiguration = .default(chirality: .right), handRenderOptions: GestureKit.HandRenderOptions = [.model])
+}
+extension GestureKit.PoseAction : Swift.Equatable {}
+extension GestureKit.PoseAction : Swift.Hashable {}
+extension GestureKit.PoseAction : Swift.RawRepresentable {}
+extension GestureKit.GestureKitError : Swift.Equatable {}
+extension GestureKit.GestureKitError : Swift.Hashable {}

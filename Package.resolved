@@ -1,0 +1,15 @@
+{
+  "originHash" : "95932c2ae1552820a6a9689378b93788f578a4302c4f34cf992eac84ac216423",
+  "pins" : [
+    {
+      "identity" : "uuidv7",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nthState/UUIDV7",
+      "state" : {
+        "branch" : "main",
+        "revision" : "68c460a23918f82b590cf4b20d06e92e019b39fc"
+      }
+    }
+  ],
+  "version" : 3
+}

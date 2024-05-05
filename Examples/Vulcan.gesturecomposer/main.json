@@ -1,0 +1,38 @@
+{
+  "metadata" : {
+    "author" : "Apple Vision Pro",
+    "description" : "",
+    "tags" : "",
+    "title" : "Vulcan",
+    "tool" : "Gesture Composer by nthState"
+  },
+  "poses" : [
+    {
+      "duration" : 0,
+      "rules" : [
+        {
+          "action" : "distance_less_than",
+          "description" : "",
+          "id" : "67F65BB1-F546-4025-91F1-AC544C37653C",
+          "source" : "right.ringFingerTip",
+          "target" : "right.middleFingerTip",
+          "value" : 0.03
+        }
+      ]
+    },
+    {
+      "duration" : 0,
+      "rules" : [
+        {
+          "action" : "distance_greater_than",
+          "description" : "",
+          "id" : "C0EE15E9-A00D-451F-98D7-368913B41F81",
+          "source" : "right.ringFingerTip",
+          "target" : "right.middleFingerTip",
+          "value" : 0.05
+        }
+      ]
+    }
+  ],
+  "version" : "1"
+}

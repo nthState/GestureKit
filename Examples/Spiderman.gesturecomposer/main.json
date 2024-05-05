@@ -1,0 +1,62 @@
+{
+  "metadata" : {
+    "author" : "Apple Vision Pro",
+    "description" : "",
+    "tags" : "",
+    "title" : "Spider-Man",
+    "tool" : "Gesture Composer by nthState"
+  },
+  "poses" : [
+    {
+      "duration" : 0,
+      "rules" : [
+        {
+          "action" : "distance_less_than",
+          "description" : "",
+          "id" : "13183F7B-8E9B-4A5C-9613-6C6A3F105E9F",
+          "source" : "right.littleFingerTip",
+          "target" : "right.ringFingerTip",
+          "value" : 0.03
+        },
+        {
+          "action" : "distance_less_than",
+          "description" : "",
+          "id" : "EEA4CB11-BAC7-4DFE-9E0F-2334C14F0B30",
+          "source" : "right.ringFingerTip",
+          "target" : "right.middleFingerTip",
+          "value" : 0.03
+        },
+        {
+          "action" : "distance_less_than",
+          "description" : "",
+          "id" : "B4189500-A227-4CE9-B456-29EF99CA583D",
+          "source" : "right.middleFingerTip",
+          "target" : "right.indexFingerTip",
+          "value" : 0.03
+        }
+      ]
+    },
+    {
+      "duration" : 0,
+      "rules" : [
+        {
+          "action" : "distance_greater_than",
+          "description" : "",
+          "id" : "A3B695E7-55F0-4AF0-ABAA-00295217E797",
+          "source" : "right.ringFingerTip",
+          "target" : "right.littleFingerTip",
+          "value" : 0.06
+        },
+        {
+          "action" : "distance_greater_than",
+          "description" : "",
+          "id" : "AE04B94F-873D-435E-BDDF-A2B6D42133CA",
+          "source" : "right.middleFingerTip",
+          "target" : "right.indexFingerTip",
+          "value" : 0.06
+        }
+      ]
+    }
+  ],
+  "version" : "1"
+}

@@ -1,0 +1,25 @@
+{
+  "metadata" : {
+    "author" : "Apple Vision Pro",
+    "description" : "",
+    "tags" : "",
+    "title" : "Ring thumb tip touch",
+    "tool" : "Gesture Composer by nthState"
+  },
+  "poses" : [
+    {
+      "duration" : 0,
+      "rules" : [
+        {
+          "action" : "distance_less_than",
+          "description" : "",
+          "id" : "C51FB286-E7CB-461B-BDDD-E27469069BD2",
+          "source" : "right.ringFingerTip",
+          "target" : "right.thumbTip",
+          "value" : 0.02
+        }
+      ]
+    }
+  ],
+  "version" : "1"
+}
