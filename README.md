@@ -24,6 +24,8 @@ Gestures can be composed and exported from the VisionOS Gesture Composer App
 The GestureComposer App exports `*.gesturecomposer` packages, we can pass these to
 the `GestureDetector` which will `detect` if the user has performed a particular gesture.
 
+[![Gesture Composer App](https://img.youtube.com/vi/oShnzTdyEWg/0.jpg)](https://youtu.be/oShnzTdyEWg)
+
 ## Benefits of using GestureKit <a name="benefits"></a>
 
 - You don't need to manually program gestures
