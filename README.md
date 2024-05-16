@@ -25,6 +25,7 @@ The GestureComposer App exports `*.gesturecomposer` packages, we can pass these 
 the `GestureDetector` which will `detect` if the user has performed a particular gesture.
 
 [![Gesture Composer App](https://img.youtube.com/vi/oShnzTdyEWg/0.jpg)](https://youtu.be/oShnzTdyEWg)
+[![Gesture Composer App with users hands](https://img.youtube.com/vi/kfKj9heSKLA/0.jpg)](https://youtu.be/kfKj9heSKLA)
 
 ## Benefits of using GestureKit <a name="benefits"></a>
 
