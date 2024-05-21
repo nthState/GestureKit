@@ -8796,49 +8796,49 @@
     {
       "filePath": "\/Users\/chrisdavis\/Developer\/GestureComposer\/GestureComposerApp\/SwiftPackages\/GestureKit\/Sources\/GestureKit\/DataModel\/GesturePackage.swift",
       "kind": "StringLiteral",
-      "offset": 432,
+      "offset": 864,
       "length": 17,
       "value": "\"gesturecomposer\""
     },
     {
       "filePath": "\/Users\/chrisdavis\/Developer\/GestureComposer\/GestureComposerApp\/SwiftPackages\/GestureKit\/Sources\/GestureKit\/DataModel\/GesturePackage.swift",
       "kind": "StringLiteral",
-      "offset": 498,
+      "offset": 930,
       "length": 14,
       "value": "\"Intermediate\""
     },
     {
       "filePath": "\/Users\/chrisdavis\/Developer\/GestureComposer\/GestureComposerApp\/SwiftPackages\/GestureKit\/Sources\/GestureKit\/DataModel\/GesturePackage.swift",
       "kind": "StringLiteral",
-      "offset": 559,
+      "offset": 991,
       "length": 11,
       "value": "\"QuickLook\""
     },
     {
       "filePath": "\/Users\/chrisdavis\/Developer\/GestureComposer\/GestureComposerApp\/SwiftPackages\/GestureKit\/Sources\/GestureKit\/DataModel\/GesturePackage.swift",
       "kind": "StringLiteral",
-      "offset": 615,
+      "offset": 1047,
       "length": 9,
       "value": "\"Preview\""
     },
     {
       "filePath": "\/Users\/chrisdavis\/Developer\/GestureComposer\/GestureComposerApp\/SwiftPackages\/GestureKit\/Sources\/GestureKit\/DataModel\/GesturePackage.swift",
       "kind": "StringLiteral",
-      "offset": 663,
+      "offset": 1095,
       "length": 11,
       "value": "\"main.json\""
     },
     {
       "filePath": "\/Users\/chrisdavis\/Developer\/GestureComposer\/GestureComposerApp\/SwiftPackages\/GestureKit\/Sources\/GestureKit\/DataModel\/GesturePackage.swift",
       "kind": "StringLiteral",
-      "offset": 721,
+      "offset": 1153,
       "length": 19,
       "value": "\"intermediate.json\""
     },
     {
       "filePath": "\/Users\/chrisdavis\/Developer\/GestureComposer\/GestureComposerApp\/SwiftPackages\/GestureKit\/Sources\/GestureKit\/DataModel\/GesturePackage.swift",
       "kind": "BooleanLiteral",
-      "offset": 1869,
+      "offset": 2301,
       "length": 5,
       "value": "false"
     },
