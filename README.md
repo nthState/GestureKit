@@ -11,8 +11,9 @@ A Swift Package to detect Hand Gestures.
 	1. [Gesture Detection Example Code](#example_detection_code)
 	2. [Virtual Hands Example Code](#example_virtual_hands_code)
 5. [Examples](#examples)
-6. [Appendix](#appendix)
-7. [About me](#about_me)
+6. [Info.plist](#plist)
+7. [Appendix](#appendix)
+8. [About me](#about_me)
 
 
 ## Introduction <a name="introduction"></a>
@@ -154,6 +155,17 @@ extension ContentView: View {
 | On your Right hand, Move your finger tips together, then move your ring and middle finger to your plam | [Download the Spiderman example](Examples/Spiderman.gesturecomposer) ![Spiderman Gesture](Examples/Spiderman.gesturecomposer/Preview/Preview.apng) |
 | On your Right hand, Move your finger tips together, then put your middle finger tip and ring finger tip together, then separate them | [Download the Vulcan Salute example](Examples/Vulcan.gesturecomposer) ![Vulcan Salute Gesture](Examples/Vulcan.gesturecomposer/Preview/Preview.apng) |
 | On your Right hand, Touch your ring finger tip and thumb tip on together | [Download the ring-thumb-tip-touch example](Examples/ring-thumb-tip-touch.gesturecomposer) ![Ring Thumb Tip Touch](Examples/ring-thumb-tip-touch.gesturecomposer/Preview/Preview.apng) |
+
+## Info.plist <a name="plist"></a>
+
+You will also need to add the following keys to your Info.plist
+
+```
+<key>NSWorldSensingUsageDescription</key>
+<string>Insert your description here</string>
+<key>NSHandsTrackingUsageDescription</key>
+<string>Insert your description here</string>
+```
 
 ## Appendix <a name="appendix"></a>
 
