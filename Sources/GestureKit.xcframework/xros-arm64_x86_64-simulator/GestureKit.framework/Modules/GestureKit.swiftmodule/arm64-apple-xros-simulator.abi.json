@@ -9109,6 +9109,13 @@
       "value": "2"
     },
     {
+      "filePath": "\/Users\/chrisdavis\/Developer\/GestureComposer\/GestureComposerApp\/SwiftPackages\/GestureKit\/Sources\/GestureKit\/InternalDetector.swift",
+      "kind": "Dictionary",
+      "offset": 1780,
+      "length": 4,
+      "value": "[]"
+    },
+    {
       "filePath": "\/Users\/chrisdavis\/Developer\/GestureComposer\/GestureComposerApp\/SwiftPackages\/GestureKit\/Sources\/GestureKit\/Logger+.swift",
       "kind": "StringLiteral",
       "offset": 243,
