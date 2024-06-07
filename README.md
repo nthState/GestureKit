@@ -7,13 +7,14 @@ A Swift Package to detect Hand Gestures.
 1. [Introduction](#introduction)
 2. [How it works](#how_it_works)
 3. [Benefits](#benefits)
-4. [Example Code](#example_code)
+4. [Installation](#installation)
+5. [Example Code](#example_code)
 	1. [Gesture Detection Example Code](#example_detection_code)
 	2. [Virtual Hands Example Code](#example_virtual_hands_code)
-5. [Examples](#examples)
-6. [Info.plist](#plist)
-7. [Appendix](#appendix)
-8. [About me](#about_me)
+6. [Examples](#examples)
+7. [Info.plist](#plist)
+8. [Appendix](#appendix)
+9. [About me](#about_me)
 
 
 ## Introduction <a name="introduction"></a>
@@ -37,6 +38,20 @@ the `GestureDetector` which will `detect` if the user has performed a particular
 - Multiple gestures can be detected at a time, for instance, one's left hand could perform a gesture different to one's right hand
 - GestureComposer packages contain *.USDZ Animated 3D files of the composed gesture to optionally show users what to do with their hands
 - The file-format is straight forward, ready for expansion ✨
+
+## Installation <a name="installation"></a>
+
+GestureKit is best installed via Xcode's Package Manager with the following URL
+
+```
+https://github.com/nthState/GestureKit
+```
+
+*Note* If you install via copying the project directly, you may get a UUIDV7 error, you will also need to include the following package
+
+```
+https://github.com/nthState/UUIDV7
+```
 
 ## Example Code <a name="example_code"></a>
 
